@@ -43,5 +43,5 @@ function(gen_cmas target_env)
 endfunction()
 
 include(FindPackageHandleStandardArgs)
-find_package_handle_standard_args(Clarisse DEFAULT_MSG
+find_package_handle_standard_args(Clarisse
         REQUIRED_VARS CLARISSE_LIBRARY_DIR CLARISSE_INCLUDE_DIR)

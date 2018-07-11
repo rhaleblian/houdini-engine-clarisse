@@ -29,7 +29,7 @@ inline CoreString convert_hapi_corestring(const HAPI_Session* session, HAPI_Stri
         return "";
     } else { return CoreString(&string_data[0]); }
 }
-/*
+
 inline CoreString get_material_name(const HAPI_Session* session, HAPI_AssetId asset, HAPI_MaterialId material)
 {
     HAPI_MaterialInfo material_info;
@@ -255,4 +255,4 @@ inline void export_materials(const HAPI_Session* session, HAPI_AssetId asset_id,
     }
     if (rec_mutex != 0)
         pthread_mutex_unlock(rec_mutex);
-}*/
+}

@@ -7,7 +7,7 @@
 #include <module.h>
 #include <resource_property.h>
 #include <geometry_point_cloud.h>
-#include <poly_mesh.h>
+#include <poly_mesh.h>`
 #include <poly_mesh_property.h>
 #include <app_progress_bar.h>
 #include <core_vector.h>
@@ -82,7 +82,7 @@ IX_MODULE_CLBK::init_class(OfClass& cls)
 ResourceData *
 IX_MODULE_CLBK::create_resource(OfObject& object, const int& resource_id, void* /*data*/)
 {
-    /*if (resource_id == ModuleGeometry::RESOURCE_ID_GEOMETRY)
+    if (resource_id == ModuleGeometry::RESOURCE_ID_GEOMETRY)
     {
         auto* object_data = reinterpret_cast<HapiObjectData*>(object.get_module_data());
         if ((object_data->asset_id == INT_MIN) || (object_data->session == 0)) {
@@ -117,20 +117,20 @@ IX_MODULE_CLBK::create_resource(OfObject& object, const int& resource_id, void* 
         CoreArray<GeometryNormalMap> normal_maps;
         CoreArray<GeometryColorMap> color_maps;
 
-        export_normals(session, asset_id, object_id, geo_id, part_id, part_info, polygon_vertex_indices, normal_maps);
-        export_uvs(session, asset_id, object_id, geo_id, part_id, part_info, polygon_vertex_indices, uv_maps);
+//        export_normals(session, asset_id, object_id, geo_id, part_id, part_info, polygon_vertex_indices, normal_maps);
+//        export_uvs(session, asset_id, object_id, geo_id, part_id, part_info, polygon_vertex_indices, uv_maps);
 
         // reading material
         CoreArray<CoreString> shading_groups;
         CoreArray<unsigned int> shading_group_indices;
-        export_materials(session, asset_id, object_id, geo_id, part_id, part_info, &g_rec_mutex, shading_groups, shading_group_indices);
+        //export_materials(session, asset_id, object_id, geo_id, part_id, part_info, &g_rec_mutex, shading_groups, shading_group_indices);
 
         auto* polymesh = new PolyMesh;
         polymesh->set(vertices, velocities, polygon_vertex_indices,
                 polygon_vertex_count, shading_group_indices, shading_groups,
                 uv_maps, normal_maps, color_maps, 0);
         return polymesh;
-    }*/
+    }
     return nullptr;
 }
 
